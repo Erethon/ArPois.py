@@ -65,7 +65,7 @@ def create_pkt_arp_poison():
 
 if (len(argv) != 4 ):
     print "Usage: python arpois.py interface target_ip spoofing_ip."
-    print   "Example: python arpois.py wlan0 192.168.1.42 192.168.1.1"
+    print "Example: python arpois.py wlan0 192.168.1.42 192.168.1.1"
     exit()
 
 create_pkt_arp_poison()
