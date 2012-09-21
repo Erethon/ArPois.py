@@ -1,2 +1,1 @@
-ArPois.py is an arp spoofer written in Python, using RAW Sockets. It requires ARPing and root privileges
- for RAW Sockets. Its purpose is strictly educational.
+ArPois.py is an arp spoofer written in Python using RAW Sockets. It requires ARPing to be installed and also root privileges in order to use Raw Sockets. Haven't really tested it and can't guarantee it will work, as it's a proof of concept. Its purpose is strictly educational. For licensing check the LICENSE file.
