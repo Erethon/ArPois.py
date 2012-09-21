@@ -1,6 +1,6 @@
 # A proof of concept ARP spoofer by Erethon, please check README.mb and LICENSE files.
 # The purpose of this script is stricly educational. It's a proof of concept
-# and I haven't really tested, so I don't know if it will work.
+# and I haven't really tested it, so I don't know if it will work.
 # Once again this is to be used for educational purposes only, I am in no way
 # responsible for misuse of it.
 # Usage: python arpois.py interface target_ip spoofing_ip.
