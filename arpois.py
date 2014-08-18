@@ -25,8 +25,7 @@ def get_src_mac():
 
 def create_dst_ip_addr():
     dst_ip_addr = ''
-    ip_src_dec = argv[2]
-    ip_src_dec = ip_src_dec.split(".")
+    ip_src_dec = argv[2].split(".")
     for i in range(len(ip_src_dec)):
         dst_ip_addr += chr(int(ip_src_dec[i]))
     return dst_ip_addr
@@ -41,7 +40,7 @@ def get_src_ip_addr():
 
 
 def get_dst_mac_addr():
-    p = subprocess.Popen(["arping", argv[2], "-c", "1"],
+    p = subprocess.Popen(["arping", argv[2], "-c", "1", "-i", argv[1]],
                          shell=False, stdout=subprocess.PIPE)
     sleep(2)
     remote_mac = search('(([0-9a-f]{2}:){5}[0-9a-f]{2})', p.communicate()[0])
@@ -49,7 +48,7 @@ def get_dst_mac_addr():
 
 
 def create_pkt_arp_poison():
-    s = socket.socket(socket.AF_PACKET, socket.SOCK_RAW)
+    s = socket.socket(socket.AF_PACKET, socket.SOCK_RAW, socket.SOCK_RAW)
     s.bind((argv[1], 0))
     src_addr = get_src_mac()
     dst_addr = get_dst_mac_addr()
