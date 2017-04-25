@@ -1,5 +1,5 @@
 # A proof of concept ARP spoofer by Erethon
-# Please check README.mb and LICENSE files.
+# Please check README.md and LICENSE files.
 # The purpose of this script is stricly educational. It's a proof of concept
 # and I haven't really tested it, so I don't know if it will work.
 # Once again this is to be used for educational purposes only, I am in no way
